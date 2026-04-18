@@ -149,3 +149,7 @@ button:hover {
   opacity: 1;
   transform: scale(1.1);
 }
+
+.banner {
+  transition: 0.5s ease;
+}
