@@ -153,3 +153,9 @@ button:hover {
 .banner {
   transition: 0.5s ease;
 }
+
+.movies img.active {
+  opacity: 1;
+  transform: scale(1.1);
+  border: 2px solid red;
+}
