@@ -1,4 +1,5 @@
-{
+/* RESET */
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -10,10 +11,9 @@ body {
   color: #fff;
 }
 
+/* HEADER */
 header {
   position: absolute;
-  top: 0;
-  left: 0;
   width: 100%;
   display: flex;
   justify-content: space-between;
@@ -39,16 +39,15 @@ header {
 }
 
 .nav li a {
-  text-decoration: none;
   color: #fff;
-  font-size: 16px;
-  transition: 0.3s;
+  text-decoration: none;
 }
 
 .nav li a:hover {
   color: red;
 }
 
+/* SEARCH */
 .search {
   position: relative;
 }
@@ -58,12 +57,6 @@ header {
   background: transparent;
   border: 1px solid #fff;
   color: #fff;
-  outline: none;
-  border-radius: 5px;
-}
-
-.search input::placeholder {
-  color: #ccc;
 }
 
 .search i {
@@ -73,65 +66,63 @@ header {
   transform: translateY(-50%);
 }
 
+/* BANNER */
 .banner {
   width: 100%;
   height: 100vh;
   display: flex;
   align-items: center;
   padding: 50px;
-  background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('bg.jpg');
+  position: relative;
+
+  background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)),
+              url('bg.jpg');
   background-size: cover;
   background-position: center;
 }
 
-.banner .content {
+/* CONTENT */
+.content {
   max-width: 600px;
 }
 
-.banner .content h2 {
-  font-size: 60px;
-  font-weight: bold;
-  line-height: 1.2;
+.content h2 {
+  font-size: 70px;
 }
 
-.banner .content p {
+.content p {
   margin: 15px 0;
-  font-size: 18px;
-  color: #ddd;
+  color: #ccc;
 }
 
+/* BUTTON */
 button {
   padding: 12px 30px;
-  margin-top: 15px;
-  border: none;
   background: red;
+  border: none;
   color: #fff;
   cursor: pointer;
-  font-size: 16px;
-  border-radius: 5px;
-  transition: 0.3s;
 }
 
 button:hover {
   background: darkred;
-  transform: scale(1.05);
 }
 
+/* IMAGE */
+.movie-img {
+  position: absolute;
+  right: 50px;
+  bottom: 0;
+  max-height: 90%;
+}
+
+/* RESPONSIVE */
 @media (max-width: 768px) {
-  header {
-    flex-direction: column;
-    padding: 20px;
+  .movie-img {
+    display: none;
   }
 
-  .nav {
-    margin: 10px 0;
-  }
-
-  .banner {
-    padding: 20px;
-  }
-
-  .banner .content h2 {
-    font-size: 35px;
+  .content h2 {
+    font-size: 40px;
   }
 }
